@@ -31,7 +31,7 @@
 * BEM naming conventions could definitely be better
 
 
-### Hindsight:
+### Hindsight
 
 
 * as specified, video tiles are both a child and parent component but I understand now that the child should have been a vote component; breaking out the thumbnail and details into separate components had no advantage
