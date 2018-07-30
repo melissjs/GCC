@@ -1,0 +1,142 @@
+.footer {
+  margin-top: 10rem;
+  background-color: $color-off-white;
+  padding-top: 3rem;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $color-primary;
+    font-size: 1.4rem;
+  }
+
+  &__upper {
+    @include container(80%);
+    @include layout($susy-layout-footer-upper);
+    font-size: 1.3rem;
+    color: $color-primary;
+
+    @include respond(phone) {
+      @include container(80%);
+      @include layout($susy-layout-one);
+    }
+
+  }
+  
+  &__menu-col {
+    @include span(1 of 5);
+
+    @include respond(phone) {
+      @include span(1);
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__menu-links {
+    list-style-type: none;
+
+    &__item {
+      text-decoration: none;
+      color: $color-primary;
+      line-height: 3rem;
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color-secondary;
+      }
+    }
+
+  }
+
+  &__lower {
+    margin-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    @include container(80%);
+    @include layout($susy-layout-footer-lower);
+
+      @include respond(footer-break) {
+        @include container(90%);
+        @include layout($susy-layout-one);
+      }
+  }
+
+}
+
+.social-buttons {
+  @include span(2 of 5);
+
+  @include respond(footer-break) {
+    @include span(1 of 2);
+  }
+
+  &__button {
+    @include bgClipText($color-primary);
+
+  }
+
+}
+
+i.flaticon-size {
+    &:before {
+      font-size: 4.5rem !important;
+      margin-left: 1rem !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+i.flaticon-size:first-child::before {
+  margin-left: 0rem !important;
+}
+
+.app-links {
+  @include span(3 of 5 at 3);
+
+  @include respond(footer-break) {
+    @include span(1);
+    margin-top: 2rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: inline-block;
+
+    @include respond(phone) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    &-item {
+      display: inline-block;
+
+      &--img {
+        display: inline-block;
+        width: auto;
+        height: 1.8rem;
+        margin-right: 1rem;
+
+          @include respond(tab-port) {
+            height: 1.4rem;
+          }
+
+          
+      }
+    }
+
+  }
+
+  &__link-last {
+    transform: translateY(5px) !important;  
+
+      @include respond(tab-port) {
+        transform: translateY(3px) !important;
+      }
+  }
+
+}
+
+

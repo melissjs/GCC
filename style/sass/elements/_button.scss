@@ -1,0 +1,18 @@
+.btn {
+  text-transform: uppercase;
+  align-content: center;
+  border-radius: .5rem;
+  padding: .5rem;
+
+    &__large {
+      padding: 1rem;
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 1.8rem;
+    }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}

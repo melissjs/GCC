@@ -1,0 +1,75 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $spread, $color) {
+  -webkit-box-shadow: $x $y $spread $color;
+  -moz-box-shadow: $x $y $spread $color;
+  -ms-box-shadow: $x $y $spread $color;
+  -o-box-shadow: $x $y $spread $color;
+  box-shadow: $x $y $spread $color;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bgClipText($color) {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: $color;
+  color: transparent;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0-600px:      phone               37.5em
+600-900px:    tablet portrait     56.25em
+900-1200px:   tablet landscape    75em
+1200-1800px:  non media query     normal
+1800+px:      big desktop         112.5em
+*/
+
+// EXAMPLE
+// @mixin respond-phone {
+//     @media (max-width: 600px) { @content };
+// }
+
+// BREAKPOINT ARGS
+/*
+phone           0-570px = 35.625em    [one column and smaller hero/logo]
+footer-break    0-780 = 48.75em     [footer only]
+tab-port        570-820px = 51.25em     [4 to 2 and top nav change]
+tab-land        820-1060  = 66.25em     [font]
+big-desktop     none
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 35.625em) { @content }; 
+  }
+  @if $breakpoint == footer-break {
+    @media (max-width: 48.75em) { @content }; 
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 51.25em) { @content };
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 66.25em) { @content };
+  }
+}

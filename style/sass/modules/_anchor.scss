@@ -1,0 +1,34 @@
+.anchor {
+  &__img {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    @include bgClipText($color-primary);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+
+      &:before {
+        font-size: 4rem !important; 
+      }
+
+      &:hover {
+        @include bgClipText($color-primary-light);
+      }
+
+        &--show {
+          visibility: visible;
+          opacity:1;
+          transition: opacity .5s linear;
+        }
+      
+        &--hide {
+          visibility: hidden;
+          opacity:0;
+          transition: visibility 0s .5s, opacity .5s linear;
+        }
+  }
+}
+

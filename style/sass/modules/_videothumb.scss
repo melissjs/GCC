@@ -1,0 +1,100 @@
+.videothumb {
+
+  
+  &__wrapper {
+    background-color: #ccc;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    position: relative;
+  }
+  
+
+  &__new {
+    background-color: $color-primary;
+    color: $color-white;
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    margin: .6rem 0rem;
+    padding: .4rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: .4rem;
+    z-index: 999;
+  }
+
+  &__img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      // @include respond(1) {
+      //   height: 13rem;
+      // }
+
+      // @include respond(2) {
+      //   height: 11rem;
+      // }
+
+      // @include respond(tab-port) {
+      //   height: 20rem;
+      // }
+
+      // @include respond(3) {
+      //   height: 19rem;
+      // }
+
+      // @include respond(4) {
+      //   height: 17rem;
+      // }
+
+      // @include respond(phone) {
+      //   height: 30rem;
+      // }
+  }
+
+  &__playBtn {
+    position: absolute;
+    bottom: 4.2rem;
+    right: 1rem;
+    z-index: 999;
+    @include bgClipText($color-secondary);
+      &:before {
+        font-size: 3rem !important;
+      }
+      &:hover {
+        @include bgClipText($color-white);
+        cursor: pointer;
+      }
+  }
+
+  &__moreBtn {
+    position: absolute;
+    bottom: .8rem;
+    right: 1rem;
+    z-index: 999;
+    @include bgClipText($color-primary-light);
+      &:before {
+        font-size: 3rem !important;
+      }
+      &:hover {
+        @include bgClipText($color-white);
+        cursor: pointer;
+      }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+}

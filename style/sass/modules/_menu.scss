@@ -1,0 +1,132 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  display: block;
+
+    &__top {
+      height: 60px;
+      padding: 0 3rem;
+    }
+    
+    &__bottom {
+      display: flex;
+      background-color: #f4f5f6;
+      border-top: 1px solid #d1d9e2;
+      justify-content: space-between;
+      align-content: center;
+
+        @include respond(tab-port) {
+          display: none;
+        }
+    }
+    
+    &__branding {
+      margin-top: 1.5rem;
+      float: left;
+      display:inline-block;
+    } 
+    
+    &__logo {
+      margin-top: 15px;
+      // display: block;
+      cursor: pointer;
+    }
+
+    &__menu__icon {
+      display: none;
+      float: left;
+      margin-top: -.4rem;
+
+        @include respond(tab-port) {
+          display: inline;
+        }
+    }
+}
+
+.flaticon-menu:before {
+  margin-left: 0 !important;
+  margin-right: 2rem;
+  font-size: 4rem !important;
+  @include bgClipText($color-primary);
+}
+
+.user-menu {
+  float: right;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+
+    &__username {
+      font-size: 1.4rem;
+      color: $color-primary;
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: lowercase;
+    }
+
+    &__avatar {
+      display: inline-block;
+      vertical-align: middle;
+
+        @include bgClipText($color-primary-light);
+
+        &:before {
+          font-size: 2.5rem !important;
+          margin-left: 10px !important;
+        }
+    }
+
+}
+
+.menu {
+  display: inline;
+  margin: 0px;
+
+  &-item {
+    display: inline;
+    list-style-type: none;
+    line-height: 50px;
+    padding: 0 5px;
+    margin-right: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 1.4rem;
+
+    @media (max-width: 1060px) {
+      font-size: 1.2rem;
+    }
+
+    &__link {
+      cursor: pointer;
+
+        &:link,
+        &:visited {
+          color: $color-primary;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-secondary;
+        }
+
+        &__active {
+          color: $color-secondary;
+        }
+
+    }
+
+  }
+
+}
+
+.navigation {
+  padding-left: 2.5rem;
+}
+
+.search {
+  margin: auto;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+}

@@ -1,0 +1,13 @@
+.load-more {
+  display: block;
+  text-align: center;  
+  margin-top: 4.5rem;
+
+  &-btn {
+    display: inline;
+
+      &:hover {
+        cursor: pointer;
+      }
+  }
+}

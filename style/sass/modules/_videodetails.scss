@@ -1,0 +1,102 @@
+.video-details {
+  &__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    
+  }
+  &__one {
+    display: block;
+
+  }
+
+  &__season-episode, &__episodes {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    color: $color-primary;
+    padding-top: 5px;
+  }
+}
+
+.tile-episode {
+
+  &__series-title {
+    float: left;
+    color: $color-primary;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    margin-bottom: 4px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+    &:hover {
+      cursor: pointer;
+      color: $color-secondary;
+    }
+  }
+
+  &__series-flag {
+    float: left;
+    background-color: $color-primary;
+    color: $color-white;
+    display: block;
+    margin: .6rem 0rem;
+    padding: .4rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .4rem;
+    z-index: 999;
+  }
+
+  &__title {
+    clear: both;
+    color: $color-primary;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 4px;
+    // white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-secondary;
+      }
+  }
+}
+
+.vote {
+    display: block;
+    float: right;
+    color: $color-primary;
+
+    @include clearfix;
+
+    &__like {
+      &:before {
+        font-size: 1.3rem !important;
+        margin-right: 3px !important; 
+        @include bgClipText($color-primary);
+        }
+        &:visited {
+          @include bgClipText($color-secondary);
+        }
+    }
+
+    &__dislike {
+      &:before {
+        margin-left: 3px !important; 
+        margin-right: 3px !important; 
+        font-size: 1.3rem !important;
+        @include bgClipText($color-primary);
+      }
+      &:visited {
+        @include bgClipText($color-secondary);
+      }
+    }
+
+}
+

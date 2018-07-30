@@ -1,0 +1,29 @@
+.search {
+
+  position: relative;
+
+  &__input {
+    font-size: 15px;
+    line-height: 30px;
+    // background-image: url("../../../src/assets/icons.svg#search");
+  }
+
+    &__img {
+      display: inline-block;
+    }
+
+    &__background-icon {
+      // background-image: url('data:image/svg+xml;utf8,<svg xmlns="../../../src/assets/icons.svg#search" /> </svg>');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      display: inline-block;
+  }
+}
+
+.flaticon-search {
+  // margin-left: -5rem;
+  top: .6rem;
+  right: .8rem;
+  position: absolute;
+  @include bgClipText($color-primary-light);
+}

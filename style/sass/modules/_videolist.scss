@@ -1,0 +1,24 @@
+.video-list {
+  // position: relative;
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: space-between;
+  // align-items: center;
+  @include container(94%);
+  // @include layout($susy-layout-video-4);
+
+  &__wrapper {
+    // @include span(4 of 4);
+    // display: inline-block;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: center;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    // align-content: flex-start;
+    
+  }
+}

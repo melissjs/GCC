@@ -1,0 +1,15 @@
+{
+  "editor.tabSize": 2,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+      "html": {
+          "filters": "bem"
+      }
+  },
+"editor.wordWrap": "off",
+"eslint.enable": false,
+}
